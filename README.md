@@ -1,4 +1,4 @@
-# Sistema de Antecedentes Vehiculares de la Policia Bolivia
+# Sistema de Registro Antecedentes Vehiculares de la Policia Boliviana
 
 
 >>Sistema Realizado por Ronald Nina Layme
