@@ -5,7 +5,7 @@
                         <strong>Todos los Derechos Reservados  &copy; <?=date("Y")!="2019"?'2019':'';?> <?php echo date("Y")?></strong>
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 text-right" title="Cel: (591)-73230568">
-                        Sistema Desarrollado por: <a href="http://fb.com/ronaldnina" target="_blank" title="Cel: (591)-73230568"><strong>Ronald Nina Layme</strong></a>
+                        <!-- Sistema Desarrollado por: <a href="http://fb.com/ronaldnina" target="_blank" title="Cel: (591)-73230568"><strong>Ronald Nina Layme</strong></a> -->
                     </div>
                 </div>
             </div>
