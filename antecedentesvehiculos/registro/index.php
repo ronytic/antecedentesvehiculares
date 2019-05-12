@@ -137,7 +137,7 @@ function listarAntecedentesPendientes(){
 						</tr>
 						<tr>
 							<td class=" resaltar">Marca: </td>
-							<td class="" colspan="1"><?php echo ($m['Nombre'])?></td>
+							<td class="" colspan="1"><?php echo ($mar['Nombre'])?></td>
 						</tr>
 						<tr>
 							<td class=" resaltar">NChasis: </td>
