@@ -25,7 +25,7 @@ $folder="../../";
         <br><br>
         <a href="./listar.php" class="btn btn-warning">Listado de Vehiculos</a>
         <br><br>
-        <a href="<?=$folder;?>antecedentesvehiculos/?CodVehiculo=<?=$CodVehiculo;?>" class="btn btn-danger"  target="_self">Registrar Antecedentes del Vehiculo</a>
+        <a href="<?=$folder;?>antecedentesvehiculos/registro/?CodVehiculo=<?=$CodVehiculo;?>" class="btn btn-danger"  target="_self">Registrar Antecedentes del Vehiculo</a>
 
     </div>
 <?php include_once($folder."pie.php");?>
