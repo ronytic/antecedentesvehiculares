@@ -185,7 +185,7 @@ $folder="../../";
 			</div>
 
 
-        </form>
+
 
 	</div>
 </div>
