@@ -79,6 +79,39 @@ $folder="../";
 <?php
 include_once("../cabecerahtml.php");
 ?>
+<script type="text/javascript">
+$(document).ready(function(){
+
+    $(document).on("click","#guardar",function(e){
+        e.preventDefault();
+        swal("¿Esta Seguro de Guardar esta denuncia?",{
+            buttons: {
+                cancel: true,
+                confirm: {
+                    text:"Aceptar",
+                    value:'ok'
+                }
+            }
+        }).then((value)=>{
+            switch (value) {
+                case "ok":{
+
+                    var CodChofer=<?=$ch['CodChofer'];?>;
+                    var FechaAntecedente=$("[name=FechaAntecedente]").val();
+                    var DetalleAntecedente=$("[name=DetalleAntecedente]").val();
+                    var CelularUsuario=$("[name=CelularUsuario]").val();
+                    var NombreUsuario=$("[name=NombreUsuario]").val();
+                    $.post("guardar.php",{"CodChofer":CodChofer,FechaAntecedente:FechaAntecedente,DetalleAntecedente:DetalleAntecedente,CelularUsuario:CelularUsuario,NombreUsuario:NombreUsuario},function(data){
+                        $("[name=DetalleAntecedente]").val('');
+                        $("[name=CelularUsuario]").val('');
+                        $("[name=NombreUsuario]").val('');
+                    });
+                }break;
+            }
+        });
+    });
+});
+</script>
 <?php
 include_once("../cabecera.php");
 ?>
@@ -175,7 +208,32 @@ include_once("../cabecera.php");
                             </td>
                         </tr>
 
-					</table>
+                    </table>
+
+                    <h3 class="text-center">Registrar  Denuncia</h3>
+                    <input type="hidden" name="CodChofer" value="<?=$ch['CodChofer'];?>">
+                    <table class="table table-bordered">
+                        <tr>
+                            <td width="35%">Fecha Denuncia </td>
+                            <td><input type="date" name="FechaAntecedente" class="form-control" value="<?=date("Y-m-d");?>" readonly></td>
+                        </tr>
+                        <tr>
+                            <td width="35%">Tu Nº de Celular</td>
+                            <td><input type="tel" name="CelularUsuario" class="form-control" value="" ></td>
+                        </tr>
+                        <tr>
+                            <td width="35%">Tu Nombre</td>
+                            <td><input type="text" name="NombreUsuario" class="form-control" value="" ></td>
+                        </tr>
+                        <tr>
+                            <td>Detalle de la denuncia</td>
+                            <td><textarea name="DetalleAntecedente" class="form-control" rows="5"></textarea></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><input type="button" value="Guardar" class="btn btn-success" id="guardar"></td>
+                        </tr>
+                    </table>
 
 				</div>
 			</div>
