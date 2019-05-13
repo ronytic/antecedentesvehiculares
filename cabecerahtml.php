@@ -1,5 +1,5 @@
 <?php
-if($_SESSION['NivelAcceso']!=4){
+if(1){
     if(!defined("CLASEUSUARIO")){
         include("class/usuario.php");
         $usuario=new usuario;
@@ -9,13 +9,6 @@ if($_SESSION['NivelAcceso']!=4){
     $datosusu=array_shift($datosusu);
     $nombrecompleto=$datosusu['Nombres']." ".$datosusu['Apellidos'];
     $solonombre=$datosusu['Nombres'];
-}else{
-    include_once("class/cliente.php");
-    $cliente=new cliente;
-    $datoscli=$cliente->mostrarTodoRegistro("CodCliente=".$_SESSION['CodUsuarioLog']);
-    $datoscli=array_shift($datoscli);
-    $nombrecompleto=$datoscli['Nombres']." ".$datoscli['Apellidos'];
-    $solonombre=$datoscli['Nombres'];
 }
 if(!defined("CLASEACCESO")){
 include("class/acceso.php");
