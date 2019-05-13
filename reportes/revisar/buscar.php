@@ -170,6 +170,10 @@ $ruta=new ruta;
                 <td class="text-center">
                 	<a href="revisar.php?Cod=<?php echo $d['CodVehiculo']?>" class="btn btn-danger btn-xs " title="Eliminar" rel="<?php echo $d['CodVehiculo']?>">
                     	Revisar
+					</a>
+					<br><br>
+					<a href="pdf.php?Cod=<?php echo $d['CodVehiculo']?>" class="btn btn-success btn-xs " title="Eliminar" rel="<?php echo $d['CodVehiculo']?>" target="_blank">
+                    	Reporte PDF
                     </a>
                 </td>
 				<?php

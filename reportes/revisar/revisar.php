@@ -5,19 +5,6 @@ include_once("../../login/check.php");
 $CodVehiculo=$_GET['Cod'];
 
 
-
-
-
-
-include_once("../../class/ruta.php");
-$ruta=new ruta;
-$rut=$ruta->mostrarTodoRegistro("",1,"Nombre");
-$rut=todoLista($rut,"CodRuta","Nombre,Detalle"," - ");
-$rut=array_unshift_assoc($rut,"%","Todos");
-
-
-
-
 include_once("../../class/vehiculo.php");
 $vehiculo=new vehiculo;
 $d=$vehiculo->mostrarTodoRegistro("CodVehiculo=$CodVehiculo",1,"");
@@ -70,6 +57,7 @@ $folder="../../";
 	<div class="panel-body">
         	<div class="row">
 				<div class="col-lg-6">
+					<a href="pdf.php?Cod=<?=$_GET['Cod'];?>" class="btn btn-primary btn-xs" target="_blank">Reporte Pdf</a>
 					<h3 class="small">Datos del Vehiculo</h3>
 					<table class=" small table table-bordered">
 						<tr>
@@ -89,7 +77,7 @@ $folder="../../";
 							<td class="" colspan="1"><?php echo ($d['NMotor'])?></td>
 						</tr>
 						<tr>
-							<td class=" resaltar">Anio: </td>
+							<td class=" resaltar">Año: </td>
 							<td class="" colspan="1"><?php echo ($d['Anio'])?></td>
 						</tr>
 						<tr>
@@ -127,6 +115,7 @@ $folder="../../";
 					</table>
 				</div>
 				<div class="col-lg-6">
+					<br>
 					<h3 class="small">Datos del Chofer</h3>
 					<table class="small table  table-bordered">
 
@@ -151,7 +140,7 @@ $folder="../../";
 							<td class="" colspan="1"><?php echo ($ch['FechaNac'])?></td>
 						</tr>
 						<tr>
-							<td class=" resaltar">Ruta : </td>
+							<td class=" resaltar">Ruta: </td>
 							<td class="" colspan="1"><?php echo ($rut['Nombre'])?></td>
 						</tr>
 						<tr>
