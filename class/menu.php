@@ -11,6 +11,7 @@ class menu extends bd{
 			case "2":{return $this->getRecords(" Comandante=1 and Activo=1 $Posicion","Orden");}break;
 			case "3":{return $this->getRecords(" Suboficial=1 and Activo=1 $Posicion","Orden");}break;
 			case "4":{return $this->getRecords(" Encargadosindicato=1 and Activo=1 $Posicion","Orden");}break;
+			case "5":{return $this->getRecords(" qw=1 and Activo=1 $Posicion","Orden");}break;
 		}
 	}
 	function inicio($Nivel,$Posicion=""){
