@@ -90,6 +90,7 @@ class bd{
 		}
 		$query ="SELECT $camposs FROM {$nombretabla} $where $group $order $count";
 		//  echo $query."<br>";
+		//   exit();
 		return $this->sql ($query);
 	}
 	public function getRecord ($id)
