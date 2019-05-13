@@ -12,10 +12,16 @@
                 <li class="nav-header">
                     <div class="dropdown profile-element">
                         <span>
-                        <div class="row">
-                            <a href="<?=$folder;?>">
-                                <img alt="image" class="img-thumbnail col-lg-12" src="<?php echo $folder?>imagenes/logo/logo.png" />
+                        <div class="row ">
+                            <a href="<?=$folder;?>" class="text-center">
+                                <img alt="image" class="img-thumbnail col-lg-12" src="<?php echo $folder?>imagenes/logo/logo.png" style="width:50%;margin-left:25%" />
+
                             </a>
+                        </div>
+                        <div class="row">
+                                <h4  class="text-center" style="color:#FFF;">
+                                    POLICIA BOLIVIANA
+                                </h4>
                         </div>
                         </span>
                         <a data-toggle="dropdown" class="dropdown-toggle" href="#">
@@ -31,7 +37,7 @@
                     </div>
                     <div class="logo-element text-center">
                         <a href="<?=$folder;?>">
-                            <img src="<?=$folder;?>imagenes/favicon.ico" class="img-thumbnail" class=" " width="60%">
+                            <img src="<?=$folder;?>imagenes/logo/logo.png" class="img-thumbnail" class=" " width="60%">
                         </a>
                     </div>
                 </li>
@@ -58,7 +64,7 @@
         <div class="navbar-header pull-left">
             <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i> </a>
                 <a class="logocentreadopequeno hidden-lg hidden-md hidden-sm" href="<?=$folder;?>">
-                    <img alt="image" class="img-thumbnail" src="<?php echo $folder?>imagenes/logo/logo.png" width="100"/>
+                    <img alt="image" class="img-thumbnail" src="<?php echo $folder?>imagenes/logo/logo1.png"  width="100"/>
                 </a>
             <form role="search" class="navbar-form-custom" action="busqueda/">
                 <div class="form-group">
