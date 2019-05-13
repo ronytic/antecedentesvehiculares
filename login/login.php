@@ -30,17 +30,7 @@ if(!empty($_POST)){
 		$usuario=mb_strtolower($usuario,"utf8");
 		//echo $usuario;
 
-		if(preg_match("/^[0-9]+$/",$usuario)){
-			$cli=$cliente->mostrarTodoRegistro("Ci='$usuario' and Whatsapp='$pass'");
-			$cli=array_shift($cli);
-			// print_r($cli);
-			// echo "si";
-			// exit();
-			$CodUsuario=$cli['CodCliente'];
-			$NivelAcceso=4;
-			$CodSucursal=0;
-			$Clasificacion=$cli['Clasificacion'];
-		}else {
+
 			$reg=$usu->loginUsuarios($usuario,$pass);
 			$reg=array_shift($reg);
 			$CodUsuario=$reg['Cod'];
@@ -50,7 +40,7 @@ if(!empty($_POST)){
 			//print_r($reg);
 			//exit();
 			//echo "no";
-		}
+
 
 		$agente=$_SERVER['HTTP_USER_AGENT'];
 		$ip=$_SERVER['REMOTE_ADDR'];
@@ -77,8 +67,8 @@ if(!empty($_POST)){
 			$_SESSION['CodUsuarioLog']=$CodUsuario;
 			$_SESSION['LoginSistemaAntecedentes']=1;
 			$_SESSION['NivelAcceso']=$NivelAcceso;
-			$_SESSION['CodSucursal']=$CodSucursal;
-            $_SESSION['Clasificacion']=$Clasificacion;
+
+
 			//echo $logusuario->optimizarTablas();
 			// echo $direccion;
 			header("Location:".$direccion);
