@@ -34,7 +34,7 @@ $ruta=new ruta;
 
         	<th width="100">Chofer</th>
 			<?php
-					if(in_array( $_SESSION['NivelAcceso'],array(1,2,3))){
+					if(in_array( $_SESSION['NivelAcceso'],array(1,2,3,4))){
 				?>
             <th width="40" colspan=""></th>
 			<?php
@@ -165,7 +165,7 @@ $ruta=new ruta;
 
 
 				<?php
-					if(in_array( $_SESSION['NivelAcceso'],array(1,2))){
+					if(in_array( $_SESSION['NivelAcceso'],array(1,2,3,4))){
 				?>
                 <td class="text-center">
                 	<a href="revisar.php?Cod=<?php echo $d['CodVehiculo']?>" class="btn btn-danger btn-xs " title="Eliminar" rel="<?php echo $d['CodVehiculo']?>">

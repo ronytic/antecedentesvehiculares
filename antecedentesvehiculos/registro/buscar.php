@@ -43,7 +43,7 @@ $ruta=new ruta;
 			<?php
 					if(in_array( $_SESSION['NivelAcceso'],array(1,2,3))){
 				?>
-				<th width="40" colspan=""></th>
+
             <th width="40" colspan=""></th>
 			<?php
 			}
@@ -170,22 +170,10 @@ $ruta=new ruta;
 
 
 
-                <td class="text-center">
-				<?php
-					if(in_array( $_SESSION['NivelAcceso'],array(1,2,3))){
-						if($d['Modificar']==1){
-				?>
-                	<a href="modificar.php?Cod=<?php echo $d['CodVehiculo']?>"  class="btn btn-primary btn-xs " title="Modificar" rel="<?php echo $d['CodVehiculo']?>">
-                    	<i class="fa fa-pencil"></i>
-					</a>
-					<?php
-						}
-					}
-				?>
-				</td>
+
 
 				<?php
-					if(in_array( $_SESSION['NivelAcceso'],array(1,2))){
+					if(in_array( $_SESSION['NivelAcceso'],array(1,2,3))){
 				?>
                 <td class="text-center">
                 	<a href="index.php?CodVehiculo=<?php echo $d['CodVehiculo']?>" class="btn btn-danger btn-xs " title="Eliminar" rel="<?php echo $d['CodVehiculo']?>">

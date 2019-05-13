@@ -68,11 +68,11 @@ $rut=array_shift($rut);
 
 include_once("../class/antecedentevehiculo.php");
 $antecedentevehiculo=new antecedentevehiculo;
-$av=$antecedentevehiculo->mostrarTodoRegistro("CodVehiculo=".$CodVehiculo,1,"");
+$av=$antecedentevehiculo->mostrarTodoRegistro("Confirmado=1 and CodVehiculo=".$CodVehiculo,1,"");
 
 include_once("../class/antecedentechofer.php");
 $antecedentechofer=new antecedentechofer;
-$ac=$antecedentechofer->mostrarTodoRegistro("CodChofer=".$d['CodChofer'],1,"");
+$ac=$antecedentechofer->mostrarTodoRegistro("Confirmado=1 and CodChofer=".$d['CodChofer'],1,"");
 
 $folder="../";
 ?>

@@ -52,7 +52,7 @@ $(document).ready(function(){
 			$("#respuesta").html(data);
 		});
 	})
-	.submit();
+	// .submit();
 	$(document).on("click",".eliminarDatos",function(e){
 		e.preventDefault();
 		swal("¿Esta Seguro de Eliminar este Registro?",{

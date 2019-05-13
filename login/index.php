@@ -8,9 +8,9 @@ require_once("../configuracion.php");
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Ronald Franz Nina Layme">
-    <meta name="description" content="Sistema de Administración para Red Internacional Empresarial Bolivia - Diseñado por Ronald Nina Layme">
-    <meta name="keywords" content="rie,sistema de administración,compra de celulares,">
-    <title>RIE</title>
+    <meta name="description" content="Sistema de Registro Antecedentes Vehiculares de la Policia BolivianaDiseñado por Ronald Nina Layme">
+    <meta name="keywords" content="">
+    <title>Sistema de Registro Antecedentes Vehiculares de la Policia Boliviana</title>
     <link rel="icon" href="<?php echo $folder;?>imagenes/favicon.ico" type="image/x-icon" />
     <link href="<?php echo $folder;?>css/core/bootstrap.min.css" rel="stylesheet">
     <link href="<?php echo $folder;?>css/core/font-awesome/css/font-awesome.css" rel="stylesheet">

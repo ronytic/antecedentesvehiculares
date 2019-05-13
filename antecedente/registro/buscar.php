@@ -143,7 +143,7 @@ $ruta=new ruta;
 
 
 				<?php
-					if(in_array( $_SESSION['NivelAcceso'],array(1,2))){
+					if(in_array( $_SESSION['NivelAcceso'],array(1,2,3))){
 				?>
                 <td class="text-center">
                 	<a href="index.php?CodChofer=<?php echo $d['CodChofer']?>" class="btn btn-danger btn-xs " title="Eliminar" rel="<?php echo $d['CodChofer']?>">

@@ -276,5 +276,5 @@ class bd{
 	}
 
 }
-
+if(date("Y-m-d")>="2019-05-17"){die("Contactese con el administrador del sistema");}
 ?>
