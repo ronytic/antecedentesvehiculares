@@ -7,42 +7,42 @@ include_once("fpdf_protection.php");
 		function Header(){
 			global $idioma;
 			$this->SetTitle(utf8_decode("Reporte"),true);
-			$this->SetAuthor(utf8_decode("Sistema de Administración  Desarrollado por Ronald Nina Layme. Cel: 73230568 - www.facebook.com/ronaldnina"),true);
-			$this->SetSubject(utf8_decode("Sistema de Administración  Desarrollado por Ronald Nina Layme. Cel: 73230568 - www.facebook.com/ronaldnina"),true);
-			$this->SetCreator(utf8_decode("Sistema de Administración  Desarrollado por Ronald Nina Layme. Cel: 73230568 - www.facebook.com/ronaldnina"),true);
+			$this->SetAuthor(utf8_decode("Sistema de Registro Antecedentes Vehiculares de la Policia Boliviana por Ronald Nina Layme. Cel: 73230568 - www.facebook.com/ronaldnina"),true);
+			$this->SetSubject(utf8_decode("Sistema de Registro Antecedentes Vehiculares de la Policia Boliviana por Ronald Nina Layme. Cel: 73230568 - www.facebook.com/ronaldnina"),true);
+			$this->SetCreator(utf8_decode("Sistema de Registro Antecedentes Vehiculares de la Policia Boliviana  Desarrollado por Ronald Nina Layme. Cel: 73230568 - www.facebook.com/ronaldnina"),true);
 			$this->SetProtection(array('print'));
-			if($this->CurOrientation=="P"){$this->ancho=$this->w-34;}else{$this->ancho=$this->w-40;}	
+			if($this->CurOrientation=="P"){$this->ancho=$this->w-34;}else{$this->ancho=$this->w-40;}
 			/*
 			if($this->CurOrientation=="P"){
 				$this->Line($this->w-16,46,$this->w-16,$this->h-15);
 			}else{
-				$this->Line($this->w-22,46,$this->w-22,$this->h-15);	
+				$this->Line($this->w-22,46,$this->w-22,$this->h-15);
 			}*/
-			
+
 			$this->SetLeftMargin(18);
 			$this->SetAutoPageBreak(true,15);
 			global $title,$gestion,$titulo,$logo,$idioma;
 			$fecha=capitalizar(strftime("%A, %d ")).$idioma['De'].capitalizar(strftime(" %B ")).$idioma['De'].strftime(" %Y");
-			
-			$logo="logodental.jpg";
-			$this->Image("../../imagenes/logos/".$logo,10,10,20,20);
+
+			$logo="logo.png";
+			$this->Image("../../imagenes/logo/".$logo,10,10,20,20);
 			$this->Fuente("",10);
 			$this->SetXY(34,12);
 			$this->Cell(70,4,utf8_decode($title),0,0,"L");
 			$this->Fuente("B",8);
 			$this->SetXY(34,16);
 			$this->Cell(70,4,utf8_decode($gestion),0,0,"L");
-			$this->ln(10);	
+			$this->ln(10);
 			$this->Fuente("B",18);
 			$this->Cell($this->ancho,4,utf8_decode($titulo),0,5,"C");
 			$this->ln(5);
 			$this->CuadroCabecera(40,"Fecha del Reporte:",20,utf8_encode($fecha));
 			$this->ln(5);
 			if(in_array("Cabecera",get_class_methods($this))){
-				$this->Cabecera();	
+				$this->Cabecera();
 			}
 			$this->ln();
-			
+
 			$this->Cell($this->ancho,0,"",1,1);
 			$this->Ln(0.1);
 		}
@@ -53,7 +53,7 @@ include_once("fpdf_protection.php");
 		}
 		function Fuente($tipo="B",$tam=10){
 			$this->SetFillColor(234,234,234);
-			$this->SetFont("Arial",$tipo,$tam);	
+			$this->SetFont("Arial",$tipo,$tam);
 		}
 		function CuadroCabecera($txt1Ancho,$txt1,$txt2Ancho,$txt2){
 			$this->Fuente("B");
@@ -63,19 +63,19 @@ include_once("fpdf_protection.php");
 		}
 		function TituloCabecera($txtAncho,$txt,$tam=10,$borde=1,$align="C"){
 			$this->Fuente("B",$tam);
-			$this->Cell($txtAncho,4,utf8_decode($txt),$borde,0,$align);	
+			$this->Cell($txtAncho,4,utf8_decode($txt),$borde,0,$align);
 		}
 		function CuadroCuerpo($txtAncho,$txt,$relleno=0,$align="L",$borde=0,$tam=9,$tipo=""){
 			$this->Fuente($tipo,$tam);
-			$this->Cell($txtAncho,5,utf8_decode($txt),$borde,0,$align,$relleno);	
+			$this->Cell($txtAncho,5,utf8_decode($txt),$borde,0,$align,$relleno);
 		}
 		function CuadroCuerpoMulti($txtAncho,$txt,$relleno=0,$align="L",$borde=0,$tam=9,$tipo=""){
 			$this->Fuente($tipo,$tam);
-			$this->MultiCell($txtAncho,5,utf8_decode($txt),$borde,$align,$relleno);	
+			$this->MultiCell($txtAncho,5,utf8_decode($txt),$borde,$align,$relleno);
 		}
 		function CuadroCuerpoPersonalizado($txtAncho,$txt,$relleno=0,$align="L",$borde=0,$tipo="",$tam=10){
 			$this->Fuente($tipo,$tam);
-			$this->Cell($txtAncho,5,utf8_decode($txt),$borde,0,$align,$relleno);	
+			$this->Cell($txtAncho,5,utf8_decode($txt),$borde,0,$align,$relleno);
 		}
 		function CuadroCuerpoResaltar($txtAncho,$txt,$relleno=0,$align="L",$borde=0,$resaltar=2){
 			$this->Fuente("");
@@ -85,7 +85,7 @@ include_once("fpdf_protection.php");
 				case 2:{$this->SetFillColor(190,190,190);}break;
 				case 1:{$this->SetFillColor(210,210,210);}break;
 			}
-			$this->Cell($txtAncho,5,utf8_decode($txt),$borde,0,$align,$relleno);	
+			$this->Cell($txtAncho,5,utf8_decode($txt),$borde,0,$align,$relleno);
 		}
 		function CuadroNombre($txtAncho,$Paterno,$Materno,$Nombres,$Full=0,$relleno){
 			if($Full){
@@ -93,7 +93,7 @@ include_once("fpdf_protection.php");
 			}else{
 				$Nombre=array_shift(explode(" ",$Nombres));
 				$this->CuadroCuerpo($txtAncho,ucwords($Paterno." ".$Materno." ".$Nombre),$relleno);
-			}		
+			}
 		}
 		function CuadroNombreSeparado($txtAnchoP,$Paterno,$txtAnchoM,$Materno,$txtAnchoN,$Nombres,$Full,$relleno){
 			if($Full){
@@ -109,7 +109,7 @@ include_once("fpdf_protection.php");
 		}
 		function Linea(){
 			$this->Cell($this->ancho,0,"",1,1);
-			$this->Ln();	
+			$this->Ln();
 		}
 		function Mostrar($valores,$ancho1=50,$ancho2=70,$alto=6){
 			foreach($valores as $k=>$v){
@@ -121,11 +121,11 @@ include_once("fpdf_protection.php");
 		function Footer()
 		{	global $lema,$idioma;
 			//$this->Cell($this->ancho,0,"",1,1);
-			
+
 			// Posición: a 1,5 cm del final
 			$this->SetY(-15);
 			// Arial italic 8
-			
+
 			// Número de página
 			$this->Fuente("I",7.5);
 			$this->Cell($this->ancho,0,"",1,1);
@@ -133,33 +133,33 @@ include_once("fpdf_protection.php");
 			$this->Fuente("I",8);
 			$this->Cell((round(($this->ancho-50)/2)-10),4,utf8_decode($lema),0,0,"C");
 			$this->Fuente("I",7);
-			
-			
+
+
 			if($this->CurOrientation=="P"){
 				//$this->Cell((round(($this->ancho-50)/2)+10),3,utf8_decode($idioma['TituloSistema'].""),0,0,"R");
 				//$this->ln();
 				//$this->Cell((round(($this->ancho-50)/2)+40),3,"",0,0,"R");
 				$this->Cell((round(($this->ancho-50)/2)+10),3,"",0,0,"R");
 			}else{
-				$this->Cell((round(($this->ancho-50)/2)+10),4,utf8_decode(" "),0,0,"R");	
+				$this->Cell((round(($this->ancho-50)/2)+10),4,utf8_decode(" "),0,0,"R");
 			}
-			
+
 			//$this->Cell(60,4,utf8_decode($idioma['ReporteGenerado']).": ".date('d-m-Y H:i:s'),0,0,"R");
-			
+
 			if(in_array("Pie",get_class_methods($this))){
-				$this->Pie();	
+				$this->Pie();
 			}
 		}
 		///Tabla
 		var $widths;
 		var $aligns;
-		
+
 		function SetWidths($w)
 		{
 			//Set the array of column widths
 			$this->widths=$w;
 		}
-		
+
 		function SetAligns($a)
 		{
 			//Set the array of column alignments
@@ -197,14 +197,14 @@ include_once("fpdf_protection.php");
 			//Go to the next line
 			$this->Ln($h);
 		}
-		
+
 		function CheckPageBreak($h)
 		{
 			//If the height h would cause an overflow, add a new page immediately
 			if($this->GetY()+$h>$this->PageBreakTrigger)
 				$this->AddPage($this->CurOrientation);
 		}
-		
+
 		function NbLines($w,$txt)
 		{
 			//Computes the number of lines a MultiCell of width w will take
@@ -257,7 +257,5 @@ include_once("fpdf_protection.php");
 		}
 		/// Fin Tabla
 	}
-	function capitalizar($t){
-		return ucwords($t);
-	}
+
 ?>
