@@ -82,7 +82,7 @@ $(document).ready(function(){
 				<table class="table">
 
 								<tr>
-				                    <td>Placa <small>(ej: 342-NDO)</small><input type="text" name="Placa" class="form-control" value="" placeholder="342-NDO"></td>
+				                    <td>Placa <small>(ej: 342NDO)</small><input type="text" name="Placa" class="form-control" value="" placeholder="342NDO"></td>
 				                    <td>Carnet de Chofer<input type="text" name="Ci" class="form-control"></td>
 
 
