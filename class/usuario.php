@@ -18,7 +18,7 @@ class usuario extends bd{
 	}
 
 	function loginUsuarios($Usuario,$Password){
-		$this->campos=array("count(*) as Can,Cod,NivelAcceso,CodSucursal");
+		$this->campos=array("count(*) as Can,Cod,NivelAcceso");
 		return $this->getRecords("Usuario='$Usuario' and Contrasena=SHA1('$Password') and Activo=1");
 	}
 }
