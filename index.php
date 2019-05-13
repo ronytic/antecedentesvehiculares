@@ -1,6 +1,9 @@
 <?php
 require_once("login/check.php");
 // print_r($_SESSION);
+if($_SESSION['NivelAcceso']==5){
+  header("Location:login/logout.php");
+}
 $titulo="Principal";
 $folder="";
 ?>
