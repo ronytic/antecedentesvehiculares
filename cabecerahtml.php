@@ -59,7 +59,7 @@ if(!defined("CLASESUBMENU")){
     <link href="<?php echo $folder?>css/core/font-awesome/css/font-awesome.css" rel="stylesheet">
 
     <link href="<?php echo $folder?>css/core/animate.css" rel="stylesheet">
-    <link href="<?php echo $folder?>css/core/style.css" rel="stylesheet">
+    <link href="<?php echo $folder?>css/core/style.css?<?=rand(1,10);?>" rel="stylesheet">
     <link href="<?php echo $folder?>css/core/core.css?2" rel="stylesheet">
     <link href="<?php echo $folder?>css/core/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.css" rel="stylesheet">
 
