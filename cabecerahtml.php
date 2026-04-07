@@ -1,22 +1,22 @@
 <?php
-if(1){
-    if(!defined("CLASEUSUARIO")){
+if (1) {
+    if (!defined("CLASEUSUARIO")) {
         include("class/usuario.php");
-        $usuario=new usuario;
+        $usuario = new usuario;
     }
 
-    $datosusu=$usuario->mostrarDatos($_SESSION['CodUsuarioLog']);
-    $datosusu=array_shift($datosusu);
-    $nombrecompleto=$datosusu['Nombres']." ".$datosusu['Apellidos'];
-    $solonombre=$datosusu['Nombres'];
+    $datosusu = $usuario->mostrarDatos($_SESSION['CodUsuarioLog']);
+    $datosusu = array_shift($datosusu);
+    $nombrecompleto = $datosusu['Nombres'] . " " . $datosusu['Apellidos'];
+    $solonombre = $datosusu['Nombres'];
 }
-if(!defined("CLASEACCESO")){
-include("class/acceso.php");
-$acceso=new acceso;
+if (!defined("CLASEACCESO")) {
+    include("class/acceso.php");
+    $acceso = new acceso;
 }
-$car=$acceso->mostrarTodoRegistro("CodAcceso=".$_SESSION['NivelAcceso']);
-$car=array_shift($car);
-    $Cargo=$car['Nombre'];
+$car = $acceso->mostrarTodoRegistro("CodAcceso=" . $_SESSION['NivelAcceso']);
+$car = array_shift($car);
+$Cargo = $car['Nombre'];
 /*switch () {
     case '1':
         $Cargo="Super Administrador";
@@ -35,17 +35,18 @@ $car=array_shift($car);
         break;
 }*/
 
-if(!defined("CLASEMENU")){
+if (!defined("CLASEMENU")) {
     include("class/menu.php");
-    $menu=new menu;
+    $menu = new menu;
 }
-if(!defined("CLASESUBMENU")){
+if (!defined("CLASESUBMENU")) {
     include("class/submenu.php");
-    $submenu=new submenu;
+    $submenu = new submenu;
 }
 ?>
 <!DOCTYPE html>
-<html>
+<html lang="es">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -54,19 +55,19 @@ if(!defined("CLASESUBMENU")){
     <meta name="keywords" content="Sistema de Administración de Red Internacional Empresarial, RIE">
 
     <title>Sistema de Registro Antecedentes Vehiculares de la Policia Boliviana</title>
-    <link rel="icon" href="<?php echo $folder?>imagenes/favicon.ico" type="image/x-icon" />
-    <link href="<?php echo $folder?>css/core/bootstrap.min.css" rel="stylesheet">
-    <link href="<?php echo $folder?>css/core/font-awesome/css/font-awesome.css" rel="stylesheet">
+    <link rel="icon" href="<?php echo $folder ?>imagenes/favicon.ico" type="image/x-icon" />
+    <link href="<?php echo $folder ?>css/core/bootstrap.min.css" rel="stylesheet">
+    <link href="<?php echo $folder ?>css/core/font-awesome/css/font-awesome.css" rel="stylesheet">
 
-    <link href="<?php echo $folder?>css/core/animate.css" rel="stylesheet">
-    <link href="<?php echo $folder?>css/core/style.css?<?=rand(1,10);?>" rel="stylesheet">
-    <link href="<?php echo $folder?>css/core/core.css?2" rel="stylesheet">
-    <link href="<?php echo $folder?>css/core/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.css" rel="stylesheet">
+    <link href="<?php echo $folder ?>css/core/animate.css" rel="stylesheet">
+    <link href="<?php echo $folder ?>css/core/style.css?<?= rand(1, 10); ?>" rel="stylesheet">
+    <link href="<?php echo $folder ?>css/core/core.css?2" rel="stylesheet">
+    <link href="<?php echo $folder ?>css/core/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.css" rel="stylesheet">
 
-    <link href="<?php echo $folder?>js/plugins/select2-3.5.2/select2.css" rel="stylesheet">
-    <link href="<?php echo $folder?>js/plugins/select2-3.5.2/select2-bootstrap.css" rel="stylesheet">
-    <link href="<?php echo $folder?>css/core/core.css?2" rel="stylesheet">
+    <link href="<?php echo $folder ?>js/plugins/select2-3.5.2/select2.css" rel="stylesheet">
+    <link href="<?php echo $folder ?>js/plugins/select2-3.5.2/select2-bootstrap.css" rel="stylesheet">
+    <link href="<?php echo $folder ?>css/core/core.css?2" rel="stylesheet">
 
-    <script src="<?php echo $folder?>js/core/jquery-2.1.1.js"></script>
-    <script src="<?php echo $folder?>js/core/general.js"></script>
-    <script src="<?php echo $folder?>js/plugins/swal/sweetalert.min.js"></script>
+    <script src="<?php echo $folder ?>js/core/jquery-2.1.1.js"></script>
+    <script src="<?php echo $folder ?>js/core/general.js"></script>
+    <script src="<?php echo $folder ?>js/plugins/swal/sweetalert.min.js"></script>
