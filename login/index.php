@@ -103,7 +103,7 @@ require_once("../configuracion.php");
                                     </div>
                                     <div class="row">
                                         <div class="col-lg-12" style="">
-                                            <p class="m-t"> <small>Todos los Derechos Reservados &copy; <?= date("Y") != "2019" ? '2019' : ''; ?> <?php echo date("Y") ?></small> </p>
+                                            <p class="m-t"> <small>Todos los Derechos Reservados &copy; <?php echo date("Y") ?></small> </p>
                                         </div>
                                     </div>
 
