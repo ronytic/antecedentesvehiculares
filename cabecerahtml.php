@@ -7,8 +7,8 @@ if (1) {
 
     $datosusu = $usuario->mostrarDatos($_SESSION['CodUsuarioLog']);
     $datosusu = array_shift($datosusu);
-    $nombrecompleto = $datosusu['Nombres'] . " " . $datosusu['Apellidos'];
-    $solonombre = $datosusu['Nombres'];
+    $nombrecompleto = (($datosusu['Nombres'] ?? '') . " " . ($datosusu['Apellidos'] ?? ''));
+    $solonombre = $datosusu['Nombres'] ?? '';
 }
 if (!defined("CLASEACCESO")) {
     include("class/acceso.php");
@@ -16,7 +16,7 @@ if (!defined("CLASEACCESO")) {
 }
 $car = $acceso->mostrarTodoRegistro("CodAcceso=" . $_SESSION['NivelAcceso']);
 $car = array_shift($car);
-$Cargo = $car['Nombre'];
+$Cargo = $car['Nombre'] ?? '';
 /*switch () {
     case '1':
         $Cargo="Super Administrador";

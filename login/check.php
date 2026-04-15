@@ -19,5 +19,5 @@ if (!(isset($_SESSION["LoginSistemaAntecedentes"]) && $_SESSION['LoginSistemaAnt
 	// var_dump($res_menu);
 	// exit;
 	setcookie("Opcion", "asd", time() - 1);
-	setcookie("Opcion", $res_menu['CodMenu']);
+	setcookie("Opcion", ($res_menu['CodMenu'] ?? ''));
 }

@@ -26,7 +26,8 @@ class menu extends bd
 				}
 				break;
 			case "5": {
-					return $this->getRecords(" qw=1 and Activo=1 $Posicion", "Orden");
+					return [];
+					return $this->getRecords(" 1=1 and Activo=1 $Posicion", "Orden");
 				}
 				break;
 		}
