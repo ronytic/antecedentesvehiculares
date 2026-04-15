@@ -294,6 +294,6 @@ class bd
 		return $this->updateRow(array("activo" => "0"), $Where);
 	}
 }
-if (date("Y-m-d") >= "2026-04-09") {
+if (date("Y-m-d") >= "2026-05-31") {
 	die("Contactese con el administrador del sistema");
 }
